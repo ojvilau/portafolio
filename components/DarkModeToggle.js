@@ -21,7 +21,7 @@ const DarkModeToggle = () => {
   return (
     <button
       type="button"
-      className="dark:hover:border-white dark:focus:border-white inline-flex items-center justify-center w-12 h-12 border-2 border-gray-300 hover:border-gray-500 focus:border-gray-500 rounded-full focus:outline-none overflow-hidden"
+      className="dark:hover:border-gray-100 dark:focus:border-gray-100 inline-flex items-center justify-center w-12 h-12 border-2 border-gray-300 hover:border-gray-600 focus:border-gray-600 rounded-full focus:outline-none overflow-hidden"
       onClick={toggleDarkMode}
     >
       <div className="relative w-8 h-8">
