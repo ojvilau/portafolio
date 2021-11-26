@@ -1,7 +1,18 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-
 import profilePic from "../public/images/profile-pic.png";
+
+const NavLink = ({ href, text }) => {
+  const router = useRouter();
+  const isActive = router.asPath === href;
+
+  return (
+    <Link href={href}>
+      <a className={isActive ? "text-blue-500" : ""}>{text}</a>
+    </Link>
+  );
+};
 
 const Header = () => (
   <header className="header flex flex-wrap items-center pb-14 w-full">
@@ -21,14 +32,10 @@ const Header = () => (
       <nav className="mt-4 sm:mt-6">
         <ul className="flex flex-wrap dark:text-gray-200 text-gray-400 text-base sm:text-lg">
           <li className="last:mr-0 mr-4">
-            <Link href="/work">
-              <a>Work</a>
-            </Link>
+            <NavLink href="/work" text="Work" />
           </li>
           <li className="last:mr-0 mr-4">
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <NavLink href="/contact" text="Contact" />
           </li>
         </ul>
       </nav>
