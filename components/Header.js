@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import profilePic from "../public/images/profile-pic.png";
+
 const Header = () => (
   <header className="header flex flex-wrap items-center pb-14 w-full">
     <Link href="/">
       <a className="relative mr-8 w-20 h-20 rounded-full overflow-hidden sm:w-24 sm:h-24">
-        <Image alt="profile picture" src="/images/profile-pic.jfif" layout="fill" objectFit="cover" />
+        <Image alt="profile picture" src={profilePic} layout="fill" objectFit="cover" placeholder="blur" />
       </a>
     </Link>
 
