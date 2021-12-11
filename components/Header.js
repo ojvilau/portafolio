@@ -14,6 +14,12 @@ const NavLink = ({ href, text }) => {
   );
 };
 
+const links = [
+  { href: "/", text: "Me" },
+  { href: "/work", text: "Work" },
+  { href: "/contact", text: "Contact" },
+];
+
 const Header = () => (
   <header className="header flex flex-wrap items-center pb-14 w-full">
     <Link href="/">
@@ -31,12 +37,11 @@ const Header = () => (
       </Link>
       <nav className="mt-4 sm:mt-6">
         <ul className="flex flex-wrap dark:text-gray-200 text-gray-400 text-base sm:text-lg">
-          <li className="last:mr-0 mr-4">
-            <NavLink href="/work" text="Work" />
-          </li>
-          <li className="last:mr-0 mr-4">
-            <NavLink href="/contact" text="Contact" />
-          </li>
+          {links.map((link) => (
+            <li key={link.text} className="last:mr-0 mr-4">
+              <NavLink {...link} />
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
