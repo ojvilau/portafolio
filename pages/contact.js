@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 export default function Contact() {
-  const { theme } = useTheme();
+  const { resolvedTheme: theme } = useTheme();
 
   return (
     <section>
