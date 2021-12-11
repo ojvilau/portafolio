@@ -31,7 +31,7 @@ const jobs = [
 ];
 
 const Job = ({ company, address, startDate, endDate, title, responsabilities }) => (
-  <div className="my-8">
+  <div className="last:mb-0 mb-12">
     <p className="font-bold">
       {company} - <em>{title}</em>
     </p>
